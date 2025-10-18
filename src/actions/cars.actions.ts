@@ -1,10 +1,6 @@
 'use server';
 
-import {
-  IResCarProps,
-  IResProviderProps,
-  IResReviewProps,
-} from '@/models/res.model';
+import { IResCarProps } from '@/models/res.model';
 import { Database } from '@/models/supabase';
 import { createServerClient } from '@supabase/ssr';
 import type { User } from '@supabase/supabase-js';
@@ -71,7 +67,7 @@ export const getCarDetails = async (user: User, slug: string) => {
     .eq('slug', slug)
     .single();
 
-  if (error) {
+  if (error || !car) {
     throw new Error('Failed to load car details');
   }
 
@@ -84,12 +80,12 @@ export const getCarDetails = async (user: User, slug: string) => {
     supabase
       .from('providers')
       .select('companyName, avatar, email, phone')
-      .match({ id: car?.provider_id })
+      .match({ id: (car as any).provider_id })
       .single(),
     supabase
       .from('reviews')
       .select('*, users(firstName, lastName)')
-      .match({ car_id: car?.id }),
+      .match({ car_id: (car as any).id }),
   ]);
 
   if (userRes.error || providerRes.error || reviewsRes.error) {

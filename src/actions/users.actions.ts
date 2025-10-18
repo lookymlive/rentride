@@ -2,14 +2,10 @@
 
 import {
   IResBookingProps,
-  IResCarProps,
-  IResProviderProps,
-  IResReviewProps,
   IResUserProps,
 } from '@/models/res.model';
 import { Database } from '@/models/supabase';
 import { createServerClient } from '@supabase/ssr';
-import type { User } from '@supabase/supabase-js';
 import { cookies } from 'next/headers';
 
 export const getUserBookings = async (
