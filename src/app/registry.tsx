@@ -52,7 +52,7 @@ export default function RootStyleRegistry({
           <ReactQueryDevtools initialIsOpen={false} />
           <AppContextProvider>
             <UserProfileContextProvider>
-              <MantineProvider>
+              <MantineProvider defaultColorScheme="dark">
                 <Box>
                   {children}
                   <ToastContainer />
