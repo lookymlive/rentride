@@ -187,7 +187,7 @@ cd rentride
 2. **Install dependencies**
 
 ```bash
-npm install
+pnpm install
 ```
 
 3. **Set up environment variables**
@@ -214,7 +214,7 @@ cp .env.example .env.local
 6. **Run the development server**
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 7. **Open your browser**
@@ -305,22 +305,22 @@ rentride/
 
 ```bash
 # Start development server
-npm run dev
+pnpm dev
 
 # Build for production
-npm run build
+pnpm build
 
 # Start production server
-npm start
+pnpm start
 
 # Run linting
-npm run lint
+pnpm lint
 
 # Type checking
-npm run type-check
+pnpm type-check
 
 # Format code
-npm run format
+pnpm format
 ```
 
 ### Code Style
