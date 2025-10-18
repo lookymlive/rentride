@@ -1,3 +1,4 @@
+'use client';
 import {
   useMantineColorScheme,
   SegmentedControl,
@@ -6,9 +7,19 @@ import {
   Box,
 } from '@mantine/core';
 import { IconSun, IconMoon } from '@tabler/icons-react';
+import { useEffect, useState } from 'react';
 
 export function ThemeSwitcher() {
   const { colorScheme, setColorScheme } = useMantineColorScheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return <Box style={{ width: 150, height: 36 }} />;
+  }
 
   return (
     <Group justify="center">

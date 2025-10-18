@@ -1,7 +1,7 @@
 'use client';
 import { useAppContext } from '@/context/AppContext';
 import { Container } from '@mantine/core';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
 import classes from './Map.module.css';
 
@@ -13,6 +13,8 @@ const Map = ({ height }: Props) => {
   const {
     state: { selectedCountry, selectedRegion },
   } = useAppContext();
+  
+  const mapRef = useRef<any>(null);
 
   const getCordinates = (): [number, number] => {
     if (selectedRegion) {
@@ -29,6 +31,7 @@ const Map = ({ height }: Props) => {
   return (
     <Container size="xl" className={classes.mapContainer}>
       <MapContainer
+        ref={mapRef}
         center={getCordinates()}
         zoom={14}
         style={{
@@ -37,6 +40,7 @@ const Map = ({ height }: Props) => {
           zIndex: 0,
           margin: 0,
         }}
+        key={`${getCordinates()[0]}-${getCordinates()[1]}`}
       >
         <TileLayer
           url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
