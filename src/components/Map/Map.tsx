@@ -1,9 +1,18 @@
 'use client';
 import { useAppContext } from '@/context/AppContext';
 import { Container } from '@mantine/core';
+import L from 'leaflet';
 import { useEffect, useMemo, useState } from 'react';
 import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
 import classes from './Map.module.css';
+
+// Fix Leaflet default icon paths
+delete (L.Icon.Default.prototype as any)._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: '/leaflet/marker-icon-2x.png',
+  iconUrl: '/leaflet/marker-icon.png',
+  shadowUrl: '/leaflet/marker-shadow.png',
+});
 
 interface Props {
   height?: string;
