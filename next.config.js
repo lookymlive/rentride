@@ -55,8 +55,9 @@ const nextConfig = {
     return config;
   },
 
-  // Enable strict mode for better error handling
-  reactStrictMode: true,
+  // Disable strict mode in development to prevent Leaflet map double initialization
+  // Re-enable in production for better error handling
+  reactStrictMode: process.env.NODE_ENV === 'production',
 
   // Production optimizations
   poweredByHeader: false,
