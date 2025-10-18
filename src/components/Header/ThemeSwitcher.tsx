@@ -25,7 +25,7 @@ export function ThemeSwitcher() {
     <Group justify="center">
       <SegmentedControl
         value={colorScheme}
-        onChange={setColorScheme}
+        onChange={(value) => setColorScheme(value as 'light' | 'dark' | 'auto')}
         data={[
           {
             value: 'light',
