@@ -1,7 +1,4 @@
-import {
-  getAllCountriesAsync,
-  getProviderDetailsAsync,
-} from '@/services/supabase.service';
+import { getProviderDetailsAsync } from '@/services/supabase.service';
 import { useQuery } from '@tanstack/react-query';
 
 export function useProviderDetails(provider_id?: string) {
