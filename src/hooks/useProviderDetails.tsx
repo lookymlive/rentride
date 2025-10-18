@@ -9,13 +9,11 @@ export function useProviderDetails(provider_id?: string) {
     isLoading,
     data: providerDetails,
     error,
-  } = useQuery(
-    ['provider', provider_id],
-    () => getProviderDetailsAsync(provider_id),
-    {
-      enabled: provider_id != null,
-    }
-  );
+  } = useQuery({
+    queryKey: ['provider', provider_id],
+    queryFn: () => getProviderDetailsAsync(provider_id),
+    enabled: provider_id != null,
+  });
 
   return {
     isLoading,
