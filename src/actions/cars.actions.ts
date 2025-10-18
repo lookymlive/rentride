@@ -6,16 +6,28 @@ import {
   IResReviewProps,
 } from '@/models/res.model';
 import { Database } from '@/models/supabase';
-import {
-  User,
-  createServerComponentClient,
-} from '@supabase/auth-helpers-nextjs';
+import { createServerClient } from '@supabase/ssr';
+import type { User } from '@supabase/supabase-js';
 import { cookies } from 'next/headers';
 
 export const getSearchedCars = async (
   searchParams: any
 ): Promise<IResCarProps[]> => {
-  const supabase = createServerComponentClient<Database>({ cookies });
+  const cookieStore = await cookies();
+  const supabase = createServerClient<Database>(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        getAll() { return cookieStore.getAll(); },
+        setAll(cookiesToSet) {
+          cookiesToSet.forEach(({ name, value, options }) =>
+            cookieStore.set(name, value, options)
+          );
+        },
+      },
+    }
+  );
 
   const matchFilter: any = {
     country_id: searchParams.country,
@@ -37,7 +49,21 @@ export const getSearchedCars = async (
 };
 
 export const getCarDetails = async (user: User, slug: string) => {
-  const supabase = createServerComponentClient<Database>({ cookies });
+  const cookieStore = await cookies();
+  const supabase = createServerClient<Database>(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        getAll() { return cookieStore.getAll(); },
+        setAll(cookiesToSet) {
+          cookiesToSet.forEach(({ name, value, options }) =>
+            cookieStore.set(name, value, options)
+          );
+        },
+      },
+    }
+  );
 
   const { data: car, error } = await supabase
     .from('cars')

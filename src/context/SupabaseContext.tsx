@@ -1,6 +1,6 @@
 import { ISupabaseContext } from '@/models/app';
 import { Database } from '@/models/supabase';
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import { createBrowserClient } from '@supabase/ssr';
 import React, { ReactNode, createContext, useContext } from 'react';
 
 export const SupabaseContext = createContext<ISupabaseContext>(
@@ -11,7 +11,10 @@ interface Props {
   children: ReactNode;
 }
 export const SupabaseContextProvider = ({ children }: Props) => {
-  const supabase = createClientComponentClient<Database>();
+  const supabase = createBrowserClient<Database>(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  );
 
   return (
     <SupabaseContext.Provider value={{ supabase }}>

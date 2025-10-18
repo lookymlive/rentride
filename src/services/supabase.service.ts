@@ -1,10 +1,13 @@
 import { IReqProviderProps, IReqUserProps } from '@/models/req.model';
 import { IResCountryProps, IResRegionProps } from '@/models/res.model';
 import { Database } from '@/models/supabase';
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import { createBrowserClient } from '@supabase/ssr';
 import { PostgrestSingleResponse } from '@supabase/supabase-js';
 
-export const supabaseClient = createClientComponentClient<Database>();
+export const supabaseClient = createBrowserClient<Database>(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+);
 
 export const getAllCountriesAsync = async (): Promise<IResCountryProps[]> => {
   try {
