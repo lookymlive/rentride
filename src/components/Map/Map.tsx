@@ -1,7 +1,7 @@
 'use client';
 import { useAppContext } from '@/context/AppContext';
 import { Container } from '@mantine/core';
-import { useEffect, useRef } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
 import classes from './Map.module.css';
 
@@ -14,9 +14,13 @@ const Map = ({ height }: Props) => {
     state: { selectedCountry, selectedRegion },
   } = useAppContext();
   
-  const mapRef = useRef<any>(null);
+  const [isMounted, setIsMounted] = useState(false);
 
-  const getCordinates = (): [number, number] => {
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  const coordinates = useMemo((): [number, number] => {
     if (selectedRegion) {
       return [selectedRegion.latitude || 0, selectedRegion.longitude || 0];
     }
@@ -26,13 +30,26 @@ const Map = ({ height }: Props) => {
     }
 
     return [7.9465, 1.0232];
-  };
+  }, [selectedRegion, selectedCountry]);
+
+  const displayName = useMemo(() => {
+    if (selectedRegion) return selectedRegion.name;
+    if (selectedCountry) return selectedCountry.name;
+    return 'Ghana';
+  }, [selectedRegion, selectedCountry]);
+
+  if (!isMounted) {
+    return (
+      <Container size="xl" className={classes.mapContainer}>
+        <div style={{ height: height || '300px', width: '100%', backgroundColor: '#f0f0f0' }} />
+      </Container>
+    );
+  }
 
   return (
     <Container size="xl" className={classes.mapContainer}>
       <MapContainer
-        ref={mapRef}
-        center={getCordinates()}
+        center={coordinates}
         zoom={14}
         style={{
           height: height || '300px',
@@ -40,22 +57,16 @@ const Map = ({ height }: Props) => {
           zIndex: 0,
           margin: 0,
         }}
-        key={`${getCordinates()[0]}-${getCordinates()[1]}`}
+        scrollWheelZoom={false}
       >
         <TileLayer
           url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
         <MapMarker
-          latitude={getCordinates()[0]}
-          longitude={getCordinates()[1]}
-          displayName={
-            selectedRegion
-              ? selectedRegion.name
-              : selectedCountry
-              ? selectedCountry.name
-              : 'Ghana'
-          }
+          latitude={coordinates[0]}
+          longitude={coordinates[1]}
+          displayName={displayName}
         />
       </MapContainer>
     </Container>
