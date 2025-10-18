@@ -1,8 +1,8 @@
 <div align="center">
 
-# 🚗 Car Go Rentals
+# 🚗 RentRide
 
-### *Hop in, Ride On - Rent Cars Anywhere*
+### *Your Journey, Your Ride - Rent Cars Anywhere, Anytime*
 
 [![Next.js](https://img.shields.io/badge/Next.js-15.1-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
@@ -37,7 +37,7 @@
 
 ## 🌟 Overview
 
-**Car Go Rentals** is a comprehensive car rental platform that connects vehicle owners (providers) with customers looking to rent cars. Built with modern web technologies, it offers a seamless experience for both renters and providers.
+**RentRide** is a comprehensive car rental platform that connects vehicle owners (providers) with customers looking to rent cars. Built with modern web technologies, it offers a seamless experience for both renters and providers.
 
 ### Key Highlights
 
@@ -180,8 +180,8 @@
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/lookymlive/car-go-rentals.git
-cd car-go-rentals
+git clone https://github.com/lookymlive/rentride.git
+cd rentride
 ```
 
 2. **Install dependencies**
@@ -249,7 +249,7 @@ See `.env.example` for all available options.
 ## 📁 Project Structure
 
 ```
-car-go-rentals/
+rentride/
 ├── src/
 │   ├── app/                    # Next.js App Router
 │   │   ├── (auth)/            # Auth routes (login, signup)

@@ -9,8 +9,8 @@ import RootStyleRegistry from '../registry';
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: 'Car Go Rentals',
-  description: 'Rent Cars anywhere. Hop in, Ride On',
+  title: 'RentRide - Provider Dashboard',
+  description: 'Manage your fleet and bookings',
 };
 
 export default function RootLayout({

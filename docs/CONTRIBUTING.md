@@ -1,6 +1,6 @@
-# 🤝 Contributing to Car Go Rentals
+# 🤝 Contributing to RentRide
 
-Thank you for your interest in contributing to Car Go Rentals! This document provides guidelines and instructions for contributing.
+Thank you for your interest in contributing to RentRide! This document provides guidelines and instructions for contributing.
 
 ---
 
@@ -53,13 +53,13 @@ We are committed to providing a welcoming and inclusive environment for all cont
 1. **Fork the repository** on GitHub
 2. **Clone your fork**:
 ```bash
-git clone https://github.com/YOUR_USERNAME/car-go-rentals.git
-cd car-go-rentals
+git clone https://github.com/YOUR_USERNAME/rentride.git
+cd rentride
 ```
 
 3. **Add upstream remote**:
 ```bash
-git remote add upstream https://github.com/lookymlive/car-go-rentals.git
+git remote add upstream https://github.com/lookymlive/rentride.git
 ```
 
 4. **Install dependencies**:

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide covers deploying Car Go Rentals to production environments. We'll focus on **Vercel** (recommended) but also cover other platforms.
+This guide covers deploying RentRide to production environments. We'll focus on **Vercel** (recommended) but also cover other platforms.
 
 ---
 
@@ -193,8 +193,8 @@ CMD ["node", "server.js"]
 
 **Build and Run**:
 ```bash
-docker build -t car-go-rentals .
-docker run -p 3000:3000 car-go-rentals
+docker build -t rentride .
+docker run -p 3000:3000 rentride
 ```
 
 ---

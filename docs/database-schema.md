@@ -2,7 +2,7 @@
 
 ## Overview
 
-Car Go Rentals uses **Supabase (PostgreSQL)** as its database. This document outlines the complete database schema, relationships, and setup instructions.
+RentRide uses **Supabase (PostgreSQL)** as its database. This document outlines the complete database schema, relationships, and setup instructions.
 
 ---
 

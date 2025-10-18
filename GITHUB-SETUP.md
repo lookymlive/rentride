@@ -1,8 +1,8 @@
-# 🚀 GitHub Setup Guide
+# 🚀 GitHub Setup Guide - RentRide
 
 ## ✅ Estado Actual del Proyecto
 
-**¡Felicidades!** Tu proyecto ha sido completamente modernizado y está listo para GitHub.
+**¡Felicidades!** Tu proyecto RentRide ha sido completamente modernizado y está listo para GitHub.
 
 ### ✨ Lo que se ha completado:
 
@@ -49,8 +49,8 @@
 1. Ve a [GitHub](https://github.com/lookymlive)
 2. Haz clic en el botón **"New"** (o el ícono +)
 3. Completa los datos:
-   - **Repository name**: `car-go-rentals`
-   - **Description**: `🚗 Modern car rental platform built with Next.js 15, React 19, TypeScript, and Supabase`
+   - **Repository name**: `rentride`
+   - **Description**: `🚗 RentRide - Modern car rental platform built with Next.js 15, React 19, TypeScript, and Supabase`
    - **Visibility**: Public (o Private si prefieres)
    - **NO** marques "Initialize with README" (ya tienes uno)
    - **NO** agregues .gitignore (ya tienes uno)
@@ -63,7 +63,7 @@ Abre PowerShell en la carpeta del proyecto y ejecuta:
 
 ```powershell
 # Agregar el remote de GitHub
-git remote add origin https://github.com/lookymlive/car-go-rentals.git
+git remote add origin https://github.com/lookymlive/rentride.git
 
 # Verificar que se agregó correctamente
 git remote -v
@@ -80,7 +80,7 @@ Si te pide autenticación:
 
 1. Ve a GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)
 2. Click en "Generate new token (classic)"
-3. Nombre: "Car Go Rentals"
+3. Nombre: "RentRide"
 4. Selecciona: `repo` (todos los permisos de repositorio)
 5. Click "Generate token"
 6. **COPIA EL TOKEN** (no podrás verlo de nuevo)
@@ -94,7 +94,7 @@ Si tienes GitHub CLI instalado:
 
 ```powershell
 # Crear repositorio y hacer push en un solo comando
-gh repo create car-go-rentals --public --source=. --remote=origin --push
+gh repo create rentride --public --source=. --remote=origin --push
 ```
 
 ---
@@ -103,7 +103,7 @@ gh repo create car-go-rentals --public --source=. --remote=origin --push
 
 ### 1. Verificar en GitHub
 
-Ve a: `https://github.com/lookymlive/car-go-rentals`
+Ve a: `https://github.com/lookymlive/rentride`
 
 Deberías ver:
 - ✅ README renderizado con badges

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Car Go Rentals uses **Next.js Server Actions** and **API Routes** for backend functionality. This document provides a complete reference for all available endpoints and actions.
+RentRide uses **Next.js Server Actions** and **API Routes** for backend functionality. This document provides a complete reference for all available endpoints and actions.
 
 ---
 

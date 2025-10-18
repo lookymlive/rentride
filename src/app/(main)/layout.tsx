@@ -10,8 +10,8 @@ import { ColorSchemeScript } from '@mantine/core';
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: 'Car Go Rentals',
-  description: 'Rent Cars anywhere. Hop in, Ride On',
+  title: 'RentRide - Your Journey, Your Ride',
+  description: 'Modern car rental platform. Rent cars anywhere, anytime. Built with Next.js 15 and React 19.',
 };
 
 export default function RootLayout({

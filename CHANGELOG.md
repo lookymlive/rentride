@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### 🎉 Initial Release
 
-This is the first production-ready release of Car Go Rentals, modernized and updated for 2025.
+This is the first production-ready release of RentRide, modernized and updated for 2025.
 
 ### ✨ Added
 
@@ -172,11 +172,11 @@ See [CONTRIBUTING.md](./docs/CONTRIBUTING.md) for guidelines on how to contribut
 
 ## Links
 
-- [GitHub Repository](https://github.com/lookymlive/car-go-rentals)
+- [GitHub Repository](https://github.com/lookymlive/rentride)
 - [Documentation](./docs/)
-- [Issues](https://github.com/lookymlive/car-go-rentals/issues)
-- [Pull Requests](https://github.com/lookymlive/car-go-rentals/pulls)
+- [Issues](https://github.com/lookymlive/rentride/issues)
+- [Pull Requests](https://github.com/lookymlive/rentride/pulls)
 
 ---
 
-**Note**: This changelog will be updated with each release. For detailed commit history, see the [Git log](https://github.com/lookymlive/car-go-rentals/commits/main).
+**Note**: This changelog will be updated with each release. For detailed commit history, see the [Git log](https://github.com/lookymlive/rentride/commits/main).

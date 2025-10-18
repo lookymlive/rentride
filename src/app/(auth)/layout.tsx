@@ -10,8 +10,8 @@ import { ColorSchemeScript } from '@mantine/core';
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: 'Car Go Rentals',
-  description: 'Rent Cars anywhere. Hop in, Ride On',
+  title: 'RentRide - Authentication',
+  description: 'Sign in or create your RentRide account',
 };
 
 export default function RootLayout({

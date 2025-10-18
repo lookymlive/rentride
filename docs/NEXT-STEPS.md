@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document outlines the recommended next steps for continuing development of Car Go Rentals after the initial setup and deployment.
+This document outlines the recommended next steps for continuing development of RentRide after the initial setup and deployment.
 
 ---
 
@@ -310,7 +310,7 @@ npm install dinero.js
 ### React Native App
 
 ```bash
-npx create-expo-app car-go-rentals-mobile
+npx create-expo-app rentride-mobile
 ```
 
 **Features:**
