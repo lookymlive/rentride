@@ -1,30 +1,31 @@
 'use client';
 import { IUserProfileContext } from '@/models/app';
-import { IReqUserProps } from '@/models/req.model';
 import { useRouter } from 'next/navigation';
-import { ReactNode, createContext, useContext, useState } from 'react';
+import { ReactNode, createContext, useContext } from 'react';
 import { useSupabase } from './SupabaseContext';
-import { IResUserProps } from '@/models/res.model';
 
 const UserProfileContext = createContext<IUserProfileContext>(undefined as any);
 
 interface Props {
   children: ReactNode;
 }
+
 export const UserProfileContextProvider = ({ children }: Props) => {
-  const [profileDetails, setProfileDetails] = useState<IResUserProps | null>(
-    null
-  );
   const supabase = useSupabase();
   const router = useRouter();
 
   const getProfileDetails = async () => {
-    const res = await supabase.auth.getSession();
+    // Usar getUser() para autenticación segura
+    const { data: { user: authUser }, error } = await supabase.auth.getUser();
+
+    if (error || !authUser) {
+      return null;
+    }
 
     let { data: user } = await supabase
       .from('users')
       .select('*, regions(name)')
-      .match({ id: res.data.session?.user.id })
+      .match({ id: authUser.id })
       .single();
     return user;
   };
