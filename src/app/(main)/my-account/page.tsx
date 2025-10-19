@@ -13,6 +13,11 @@ const MyAccountPage = async () => {
 
   const user = await getUserDetails(session.user.id);
 
+  if (!user) {
+    // User not found in database, redirect to login
+    redirect('/login');
+  }
+
   return (
     <>
       <AccountLayout>
