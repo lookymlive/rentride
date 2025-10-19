@@ -41,7 +41,12 @@ export const getUserBookings = async (
 
 export const getUserDetails = async (
   userId: string
-): Promise<IResUserProps> => {
+): Promise<IResUserProps | null> => {
+  if (!userId) {
+    console.error('getUserDetails: No userId provided');
+    return null;
+  }
+
   const cookieStore = await cookies();
   const supabase = createServerClient<Database>(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -64,8 +69,14 @@ export const getUserDetails = async (
     .match({ id: userId })
     .single();
 
-  if (error || data == null) {
-    throw new Error('Failed to load user details');
+  if (error) {
+    console.error('getUserDetails error:', error);
+    return null;
+  }
+
+  if (!data) {
+    console.error('getUserDetails: No data returned for userId:', userId);
+    return null;
   }
 
   return data as unknown as IResUserProps;
