@@ -13,7 +13,7 @@ export const Logo = () => {
       variant="gradient"
       gradient={primaryGradient}
     >
-      CarGo Rentals
+      RentalsCar
     </Text>
   );
 };
