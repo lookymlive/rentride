@@ -97,14 +97,22 @@ export const TableRow = ({
   price,
   status,
 }: TableRowProps) => {
+  // Validar que car existe y tiene datos
+  if (!car) {
+    return null;
+  }
+
+  const carImage = car.images && car.images.length > 0 ? car.images[0] : null;
+  const carSlug = car.slug || '#';
+
   return (
     <Table.Tr>
       <Table.Td>{formatDate(dateBooked)}</Table.Td>
       <Table.Td>
         <Flex align="center" gap={4}>
-          <Avatar size="sm" radius="xl" src={car.images[0]} />
+          <Avatar size="sm" radius="xl" src={carImage} />
 
-          <Text component={Link} href={`/cars/${car.slug}`}>
+          <Text component={Link} href={`/cars/${carSlug}`}>
             {car.make} {car.model}
           </Text>
         </Flex>
