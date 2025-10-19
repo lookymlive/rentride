@@ -25,12 +25,16 @@ export const getSession = async (): Promise<Session | null> => {
     }
   );
 
-  const { error, data } = await supabase.auth.getSession();
+  // Usar getUser() en lugar de getSession() para mayor seguridad
+  const { data: { user }, error } = await supabase.auth.getUser();
 
-  if (error) {
-    throw new Error('Failed to load session');
+  if (error || !user) {
+    return null;
   }
 
+  // Obtener la sesión solo después de verificar el usuario
+  const { data } = await supabase.auth.getSession();
+  
   return data.session;
 };
 
@@ -62,11 +66,14 @@ export const isProviderSession = async (): Promise<Session | null> => {
     }
   );
 
-  const { error, data } = await supabase.auth.getSession();
+  // Usar getUser() para autenticación segura
+  const { data: { user }, error } = await supabase.auth.getUser();
 
-  if (error) {
-    throw new Error('Failed to load session');
+  if (error || !user) {
+    return null;
   }
+
+  const { data } = await supabase.auth.getSession();
 
   if (data.session && isProvider(data.session)) {
     redirect(`/providers/${data.session.user.id}`);
@@ -95,11 +102,14 @@ export const isLoggedIn = async () => {
     }
   );
   
-  const { data, error } = await supabase.auth.getSession();
+  // Usar getUser() para autenticación segura
+  const { data: { user }, error } = await supabase.auth.getUser();
 
-  if (error) {
-    throw new Error('Failed to load session');
+  if (error || !user) {
+    return;
   }
+
+  const { data } = await supabase.auth.getSession();
 
   if (data.session) {
     if (isProvider(data.session)) {
