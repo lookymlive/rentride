@@ -9,7 +9,10 @@
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
-    "prepare": "git config core.hooksPath .githooks || true"
+    "prepare": "git config core.hooksPath .githooks || true",
+    "db:migrate": "pwsh -File scripts/run-migrations.ps1",
+    "db:generate-types": "node scripts/generate-types.js",
+    "db:setup": "npm run db:migrate && npm run db:generate-types"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
