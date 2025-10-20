@@ -1,8 +1,12 @@
 <div align="center">
 
-# 🚗 RentRide
+# 🚗 RentIA
 
-### *Your Journey, Your Ride - Rent Cars Anywhere, Anytime*
+### *Movilidad Inteligente - Tu Auto Cuando lo Necesites*
+
+[![Documentation](https://img.shields.io/badge/docs-complete-success?style=for-the-badge)](./docs/INDEX.md)
+[![Version](https://img.shields.io/badge/version-2.0.0-blue?style=for-the-badge)](./CHANGELOG.md)
+[![Status](https://img.shields.io/badge/status-production_ready-success?style=for-the-badge)](./docs/01-product-management/PROJECT_OVERVIEW.md)
 
 [![Next.js](https://img.shields.io/badge/Next.js-15.1-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
@@ -15,6 +19,15 @@
 [Features](#-features) • [Tech Stack](#-tech-stack) • [Getting Started](#-getting-started) • [Documentation](#-documentation) • [Contributing](#-contributing)
 
 </div>
+
+---
+
+## 🎯 Quick Start
+
+> **New!** Complete professional documentation organized by role:
+> - 📊 [**Documentation Index**](./docs/INDEX.md) - Start here for navigation
+> - 🎯 [**Project Overview**](./docs/01-product-management/PROJECT_OVERVIEW.md) - Where we came from, where we are, where we're going
+> - 📚 [**Documentation Summary**](./DOCUMENTATION_SUMMARY.md) - Executive summary
 
 ---
 
@@ -37,68 +50,86 @@
 
 ## 🌟 Overview
 
-**RentRide** is a comprehensive car rental platform that connects vehicle owners (providers) with customers looking to rent cars. Built with modern web technologies, it offers a seamless experience for both renters and providers.
+**RentIA** es una plataforma moderna de **carsharing inteligente** que proporciona acceso flexible y on-demand a vehículos a través de una experiencia 100% digital y sin contacto. Los usuarios pueden rentar autos por minuto, hora o día desde puntos estratégicos en la ciudad, todo potenciado por inteligencia artificial.
 
 ### Key Highlights
 
-- 🎯 **Dual User Roles**: Separate interfaces for customers and car providers
-- 🔐 **Secure Authentication**: Powered by Supabase Auth with email verification
-- 🗺️ **Location-Based Search**: Find cars by country and region
-- 📅 **Smart Booking System**: Date-based availability and booking management
-- 📸 **Image Management**: Cloudinary integration for optimized image delivery
-- 📱 **Responsive Design**: Beautiful UI that works on all devices
-- ⚡ **Performance Optimized**: Built with Next.js 15 App Router for maximum speed
+- 🚗 **Corporate Fleet**: Own fleet of vehicles (not peer-to-peer)
+- 📱 **100% Digital & Contactless**: Everything managed through mobile app
+- ⏱️ **Pay-per-Use**: Flexible pricing by minute, hour, or day
+- 📍 **Strategic Locations**: Pickup/drop-off at gas stations, malls, airports
+- 🔓 **App-Based Unlock**: Unlock vehicles directly from your phone
+- 🌍 **Flexible Returns**: Pick up at one location, return at another
+- 🔐 **Secure & Verified**: Complete identity and license verification
+- ⚡ **Instant Access**: Reserve and start driving in under 5 minutes
 
 ---
 
 ## ✨ Features
 
-### For Customers
+### For Users (Drivers)
 
-- 🔍 **Advanced Search & Filters**
-  - Search by location (country/region)
-  - Filter by car type, price range, year, transmission, fuel type
-  - Date-based availability checking
+- 📱 **Quick Registration & Verification**
+  - 5-minute digital signup
+  - Identity verification (selfie + ID + license)
+  - Secure payment method registration
+  - 24-48h approval process
   
-- 🚘 **Car Browsing**
-  - Detailed car listings with multiple images
-  - Comprehensive car specifications
-  - Real-time availability status
-  - Interactive map integration
+- 🗺️ **Find & Reserve Vehicles**
+  - Interactive map showing available cars
+  - Real-time vehicle availability
+  - Filter by type, distance, price
+  - 15-minute reservation hold
   
-- 📝 **Booking Management**
-  - Easy booking process
-  - Booking history and status tracking
-  - Price calculation based on rental period
+- 🔓 **Contactless Vehicle Access**
+  - Unlock car from app (< 30 seconds)
+  - Pre-trip photo inspection (5 photos)
+  - Automated damage detection
+  - GPS navigation integrated
 
-- 👤 **User Profile**
-  - Personal information management
-  - Avatar upload
-  - Booking history
+- ⏱️ **Flexible Usage**
+  - Pay by minute, hour, or day
+  - Pause trip feature (50% rate)
+  - Real-time cost tracking
+  - Fuel and tolls included
 
-### For Providers
+- 📍 **Flexible Drop-off**
+  - Return at any green zone
+  - Post-trip photo inspection
+  - Automatic payment processing
+  - Digital receipt & invoice
 
-- 🏢 **Provider Dashboard**
-  - Company profile management
-  - Business registration details
-  - Location management with map integration
+- 👤 **User Profile & History**
+  - Trip history and analytics
+  - Payment methods management
+  - Membership benefits
+  - Referral program
+
+### For Operations (Admin)
 
 - 🚗 **Fleet Management**
-  - Add/Edit/Delete vehicles
-  - Upload multiple car images
-  - Set pricing and rental periods
-  - Manage car availability status
+  - Real-time vehicle tracking
+  - Maintenance scheduling
+  - Cleaning coordination
+  - Vehicle relocation
 
-- 📊 **Booking Management**
-  - View incoming booking requests
-  - Approve/Reject bookings
-  - Track booking status
-  - Manage active rentals
+- 📊 **Analytics Dashboard**
+  - Fleet utilization metrics
+  - Revenue per vehicle
+  - User behavior analysis
+  - Incident tracking
 
-- 📈 **Business Tools**
-  - Overview of all vehicles
-  - Booking statistics
-  - Revenue tracking (coming soon)
+- 👥 **User Management**
+  - Verification approvals
+  - Support tickets
+  - Incident reports
+  - Fraud detection
+
+- 📈 **Business Intelligence**
+  - Revenue forecasting
+  - Demand heatmaps
+  - Pricing optimization
+  - Operational KPIs
 
 ---
 
@@ -367,14 +398,35 @@ See `/docs/deployment.md` for detailed instructions.
 
 ## 📚 Documentation
 
-Comprehensive documentation is available in the `/docs` folder:
+Comprehensive documentation organized by role in the `/docs` folder:
 
-- [Database Schema](./docs/database-schema.md) - Supabase database structure
-- [API Reference](./docs/api-reference.md) - Server Actions & API routes
-- [Component Guide](./docs/components.md) - Reusable components
-- [State Management](./docs/state-management.md) - Context & hooks
-- [Deployment Guide](./docs/deployment.md) - Production deployment
-- [Troubleshooting](./docs/troubleshooting.md) - Common issues
+### 🎯 For Product Managers
+- [Product Vision & Strategy](./docs/01-product-management/PRODUCT_VISION.md)
+- [Product Roadmap 2025-2026](./docs/01-product-management/ROADMAP.md)
+- [Metrics & KPIs](./docs/01-product-management/METRICS.md)
+
+### 🎨 For Designers & UX
+- [User Research & Personas](./docs/02-design-ux/USER_RESEARCH.md)
+- [Design System](./docs/02-design-ux/DESIGN_SYSTEM.md)
+- [UI Components Guide](./docs/02-design-ux/COMPONENTS.md)
+
+### 💻 For Developers
+- [Backend Architecture](./docs/03-development/BACKEND_ARCHITECTURE.md)
+- [Backend Refactor Summary](./docs/03-development/BACKEND_REFACTOR_SUMMARY.md)
+- [Security Guide](./docs/03-development/SECURITY_GUIDE.md)
+- [Best Practices](./docs/03-development/BEST_PRACTICES.md)
+- [Database Schema](./docs/03-development/database-schema.md)
+- [Supabase Setup](./docs/03-development/SUPABASE_SETUP.md)
+
+### 🧪 For QA & Testing
+- [Test Strategy](./docs/04-qa-testing/TEST_STRATEGY.md) 🔜
+- [Bug Reporting](./docs/04-qa-testing/BUG_REPORTING.md) 🔜
+- [Test Cases](./docs/04-qa-testing/TEST_CASES.md) 🔜
+
+### 🚀 For Operations & DevOps
+- [Monitoring & Alerts](./docs/05-operations/MONITORING.md) 🔜
+- [Incident Response](./docs/05-operations/INCIDENT_RESPONSE.md) 🔜
+- [Infrastructure](./docs/05-operations/INFRASTRUCTURE.md) 🔜
 
 ---
 
@@ -429,20 +481,29 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📊 Project Status
 
-**Version**: 1.0.0  
-**Status**: Active Development  
-**Last Updated**: January 2025
+**Version**: 2.0.0  
+**Status**: ✅ Production Ready  
+**Last Updated**: Enero 2025
 
-### Roadmap
+### Current Phase: Q1 2025 - Foundation & Growth
 
-- [ ] Payment integration (Stripe)
-- [ ] Email notifications
-- [ ] Advanced analytics dashboard
-- [ ] Mobile app (React Native)
-- [ ] Multi-language support
-- [ ] Reviews & ratings system
-- [ ] Insurance options
-- [ ] Real-time chat support
+**Completed**:
+- ✅ Core platform (search, booking, profiles)
+- ✅ Backend refactorización enterprise-grade
+- ✅ Security hardening & optimization
+- ✅ Complete documentation by role
+
+**In Progress** (Feb 2025):
+- 🔄 Reviews & ratings system
+- 🔄 Email notifications
+- 🔄 User verification
+
+**Next Up** (Mar 2025):
+- 📅 Payment integration (Stripe)
+- 📅 Advanced search & filters
+- 📅 Analytics dashboard
+
+[View Complete Roadmap →](./docs/01-product-management/ROADMAP.md)
 
 ---
 
