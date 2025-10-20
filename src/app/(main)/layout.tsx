@@ -11,8 +11,8 @@ import { ColorSchemeScript } from '@mantine/core';
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: 'RentRide - Your Journey, Your Ride',
-  description: 'Modern car rental platform. Rent cars anywhere, anytime. Built with Next.js 15 and React 19.',
+  title: 'RentIA - Carsharing Inteligente | Tu Auto por Minutos',
+  description: 'Alquila autos por minutos, horas o días. 100% digital y sin contacto. Desbloquea desde tu móvil. Disponible en Buenos Aires. Movilidad inteligente cuando la necesites.',
 };
 
 export default function RootLayout({

@@ -10,8 +10,8 @@ import { ColorSchemeScript } from '@mantine/core';
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: 'RentRide - Authentication',
-  description: 'Sign in or create your RentRide account',
+  title: 'Autenticación - RentIA',
+  description: 'Inicia sesión o regístrate en RentIA - Movilidad Inteligente',
 };
 
 export default function RootLayout({
