@@ -34,7 +34,7 @@
   - Prettier config
   
 - ✅ **Git configurado**
-  - Usuario: lookymlive
+  - Usuario: xxxxxxxxx
   - Email: lookymlive@gmail.com
   - Primer commit realizado
 
@@ -367,4 +367,3 @@ Si tienes problemas:
 
 ---
 
-**¡Éxito con tu proyecto! 🚀**
