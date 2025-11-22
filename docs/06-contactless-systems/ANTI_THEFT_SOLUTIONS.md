@@ -434,7 +434,7 @@ interface RecoveryDashboard {
 
 **En caso de robo**:
 1. Llamar: +54 11 XXXX-XXXX
-2. Email: security@rentia.com
+2. Email: lookymlive@gmail.com
 3. App: Botón "Reportar Robo"
 
 **Tiempo de respuesta**: < 5 minutos
@@ -442,6 +442,6 @@ interface RecoveryDashboard {
 ---
 
 **Documento**: Soluciones Antirrobo  
-**Owner**: Security Team  
+**Owner**: Security Team  Lookym
 **Actualizado**: Enero 2025  
 **Criticidad**: MÁXIMA
