@@ -25,7 +25,7 @@ Se ha completado la configuración profesional del backend Supabase para **RentR
 - Acceso público controlado
 - Funciones helper para roles
 
-#### ✅ `20250118000003_functions_triggers.sql`
+#### ✅ `202500000000000000_functions_triggers.sql`
 **Lógica de negocio automatizada:**
 - `check_car_availability()` - Verificar disponibilidad de autos
 - `update_car_status_on_booking()` - Actualizar estado automáticamente
@@ -178,7 +178,7 @@ npm run db:migrate
 
 Actualizar `.env.local`:
 ```env
-NEXT_PUBLIC_SUPABASE_URL=https://ymbfktjlmzlepjujaxxw.supabase.co
+NEXT_PUBLIC_SUPABASE_URL=https://ymbfktjlmzlepvvvvvvxx.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=tu-anon-key-aqui
 ```
 
@@ -264,7 +264,7 @@ SELECT refresh_all_materialized_views();
 
 **Proyecto Supabase:**
 - Nombre: **rentalscar**
-- ID: `ymbfktjlmzlepjujaxxw`
+- ID: `ymbfktjlmzlepjxxxxxx`
 - Organización: **rentalscar**
 - Región: **us-east-1**
 - Estado: **ACTIVE_HEALTHY** ✅
@@ -272,7 +272,7 @@ SELECT refresh_all_materialized_views();
 
 **URL del Proyecto:**
 ```
-https://ymbfktjlmzlepjujaxxw.supabase.co
+https://ymbfktjlmzlepjxxxxxx.supabase.co
 ```
 
 ---
