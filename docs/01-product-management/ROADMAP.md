@@ -357,4 +357,4 @@
 **Next Review**: Febrero 2025  
 **Status**: Living Document 🌱
 
-**Feedback**: product@rentride.com
+**Feedback**: lookymlive@gmail.com
