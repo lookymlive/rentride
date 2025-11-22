@@ -319,4 +319,4 @@ Payback: 2.4 meses
 **Fecha**: Enero 2025  
 **Status**: ✅ Listo para Decisión
 
-**¿Preguntas? Contactar: tech@rentia.com**
+**¿Preguntas? Contactar: lookymlive@gmail.com.com**
