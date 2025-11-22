@@ -16,7 +16,7 @@
 **Usuario actual:**
 - Email: `luisdtv@gmail.com`
 - Rol: **Customer** ✅
-- ID: `00ad418f-d903-439b-bfdb-c31a3c49a672`
+- ID: `XXXXXXXXXXXXXXXXXXXXXXXXXXXX`
 
 ---
 
@@ -186,7 +186,7 @@ INSERT INTO public.providers (
 **Paso a paso:**
 
 1. **Crear usuario provider en Dashboard:**
-   - Ir a: https://app.supabase.com/project/ymbfktjlmzlepjujaxxw/auth/users
+   - Ir a: https://app.supabase.com/project/ymbfktjlmzXXXXXXXXXX/auth/users
    - Click **Add User**
    - Email: `provider1@test.com`
    - Password: `Test123456!`
@@ -495,4 +495,4 @@ SELECT * FROM booking_history;
 - Revisa `docs/USER_ROLES_GUIDE.md` para detalles de roles
 - Pregúntame cualquier duda específica
 
-**¡Tu sistema está listo para usar!** 🎉
+**¡Listo para usar! Lo voy a probar ** 🎉
