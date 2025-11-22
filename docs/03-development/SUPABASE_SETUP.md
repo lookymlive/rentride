@@ -163,7 +163,7 @@ SELECT check_car_availability(1, CURRENT_DATE, CURRENT_DATE + 7);
 - Creates analytical views
 
 **How to run:**
-1. Copy contents of `20250118000004_views_indexes.sql`
+1. Copy contents of `xxxxxxxxxxx_views_indexes.sql`
 2. Paste into SQL Editor
 3. Click **Run**
 
@@ -246,7 +246,7 @@ Copy these keys:
 # =============================================================================
 # SUPABASE CONFIGURATION
 # =============================================================================
-NEXT_PUBLIC_SUPABASE_URL=https://ymbfktjlmzlepjujaxxw.supabase.co
+NEXT_PUBLIC_SUPABASE_URL=https://ymbfktjlmzlepjxxxxxxx.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key-here
 
 # Optional: For admin operations (keep secret!)
@@ -512,4 +512,4 @@ CREATE INDEX idx_name ON table_name(column_name);
 
 **Last Updated:** January 18, 2025  
 **Version:** 1.0.0  
-**Maintainer:** RentRide Development Team
+**Maintainer:** RentRide Development Team Lookym
