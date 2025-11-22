@@ -434,7 +434,7 @@ condiciones autorizadas."
 - ✅ Cuánto tiempo se conservan (datos personales: hasta baja + 10 años contables)
 - ✅ Derechos del usuario (acceso, rectificación, supresión)
 - ✅ Medidas de seguridad (encriptación, acceso restringido)
-- ✅ Contacto para consultas (email: privacidad@rentia.com.ar)
+- ✅ Contacto para consultas (email: lookymlive@gmail.com)
 
 ### 3. Contrato de Alquiler Individual
 
@@ -527,7 +527,7 @@ Desventajas:
 
 ### Inscripciones Obligatorias
 
-**1. AFIP - Administración Federal de Ingresos Públicos**
+**1. AFIP - Administración Federal de Ingresos Públicos** ARCA 2025
 ```
 ✅ CUIT de la sociedad
 ✅ Alta en Impuesto a las Ganancias
@@ -806,6 +806,6 @@ Tel: 4-383-7171
 **Documento**: Marco Legal Argentina  
 **Versión**: 1.0  
 **Actualizado**: Enero 2025  
-**Próxima Revisión**: Julio 2025
+**Próxima Revisión**: Enero 2026
 
 **⚖️ Compliance legal es fundamental. Invertir en asesoría legal desde el día 1. 🚗**
