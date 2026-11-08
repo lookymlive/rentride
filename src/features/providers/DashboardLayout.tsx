@@ -21,6 +21,7 @@ import {
 } from '@tabler/icons-react';
 import { ReactNode, useState } from 'react';
 import { MainLink } from './MainLink';
+import { AsistenteModulo, BotonGolondrina, GolondrinaProvider } from '../golondrina/Golondrina';
 
 const data = [
   {
@@ -54,6 +55,7 @@ export const DashboardLayout = ({ children }: DashboardProps) => {
 
   return (
     <CarContextProvider>
+      <GolondrinaProvider providerId={user?.id}>
       <AppShell
         padding="md"
         header={{ height: 60 }}
@@ -82,7 +84,10 @@ export const DashboardLayout = ({ children }: DashboardProps) => {
               </Flex>
             </Flex>
 
-            <ThemeSwitcher />
+            <Flex align="center" gap="xs">
+              <BotonGolondrina />
+              <ThemeSwitcher />
+            </Flex>
           </Flex>
         </AppShell.Header>
 
@@ -115,6 +120,8 @@ export const DashboardLayout = ({ children }: DashboardProps) => {
           {children}
         </AppShell.Main>
       </AppShell>
+      <AsistenteModulo />
+      </GolondrinaProvider>
     </CarContextProvider>
   );
 };
